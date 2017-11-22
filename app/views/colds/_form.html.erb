@@ -1,0 +1,22 @@
+<%= form_for(cold) do |f| %>
+  <% if cold.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cold.errors.count, "error") %> prohibited this cold from being saved:</h2>
+
+      <ul>
+      <% cold.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :choose %>
+    <%= f.time_select :choose %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

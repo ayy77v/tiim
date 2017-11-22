@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Choose</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Choose</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @colds.each do |cold| %>
+      <tr>
+        <td><%= cold.choose %></td>
+        <td><%= link_to 'Show', cold %></td>
+        <td><%= link_to 'Edit', edit_cold_path(cold) %></td>
+        <td><%= link_to 'Destroy', cold, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cold', new_cold_path %>

@@ -1,0 +1,2 @@
+class Cold < ApplicationRecord
+end

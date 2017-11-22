@@ -1,0 +1,12 @@
+<h1>choose</h1>
+
+    <h2>新增讨论版</h2>
+    <hr>
+    <%= form_for @cold do |f| %>
+    标题
+    <%= f.time_select :choose,  minute_step: 5, start_hour: 0, end_hour: 23 %>`
+    <br>
+    <%= f.submit "Submit", :disable_with => 'Submiting...' %>
+    <% end %>
+
+<%= link_to 'Back', colds_path %>
